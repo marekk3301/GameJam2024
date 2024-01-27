@@ -29,3 +29,4 @@ position = Vector2(200, 1034)
 line = 4
 
 [node name="Spawner" parent="." instance=ExtResource("3_bfbbs")]
+position = Vector2(200, 806)

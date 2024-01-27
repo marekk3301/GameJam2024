@@ -9,24 +9,24 @@ var collected = false
 
 
 var bpm = 120
-var speed = bpm * 1/30
+var speed = bpm * 1
 
 func set_note_position():
 	var line_height
 	match line:
 		1:
-			line_height = 806
+			line_height = 0
 		2:
-			line_height = 882
+			line_height = 76
 		3:
-			line_height = 958
+			line_height = 76 * 2
 		4:
-			line_height = 1034
-	self.position = Vector2(1000 + note_position, line_height)
+			line_height = 76 * 3
+	self.position = Vector2(note_position, line_height)
 
 
-func move():
-	self.position.x -= 4
+func move(delta):
+	self.position.x -= speed * delta
 
 
 # Called when the node enters the scene tree for the first time.
@@ -36,7 +36,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	move()
+	move(delta)
 	collect()
 
 

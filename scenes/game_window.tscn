@@ -1,13 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cllbwh0u3w8n"]
+[gd_scene load_steps=6 format=3 uid="uid://cllbwh0u3w8n"]
 
 [ext_resource type="Script" path="res://scenes/game_window.gd" id="1_owdo3"]
 [ext_resource type="PackedScene" uid="uid://cb4uhuaujkx6w" path="res://scenes/road.tscn" id="1_qpufo"]
+[ext_resource type="PackedScene" uid="uid://bbx5haalhoq0b" path="res://scenes/music.tscn" id="3_o8xmx"]
+[ext_resource type="PackedScene" uid="uid://clp21ek0jdb7h" path="res://scenes/room.tscn" id="4_yib8i"]
+[ext_resource type="PackedScene" uid="uid://baq2p7hl2hdxg" path="res://scenes/baby.tscn" id="5_mm5mm"]
 
 [node name="GameWindow" type="Node2D"]
 script = ExtResource("1_owdo3")
 
 [node name="Road" parent="." instance=ExtResource("1_qpufo")]
-position = Vector2(-23, 5)
 
 [node name="Camera2D" type="Camera2D" parent="Road"]
 anchor_mode = 0
+
+[node name="Music" parent="." instance=ExtResource("3_o8xmx")]
+
+[node name="Room" parent="." instance=ExtResource("4_yib8i")]
+
+[node name="Baby" parent="." instance=ExtResource("5_mm5mm")]
+position = Vector2(961, 593)
+scale = Vector2(0.3, 0.3)

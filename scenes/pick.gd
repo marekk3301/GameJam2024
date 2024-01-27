@@ -2,12 +2,15 @@ extends Node2D
 
 @export var line: int = 0
 
+var audio_rattle = preload("res://audio/rattle.ogg")
+@onready var player_rattle = $AudioRattleStreamPlayer2D
+
 var is_pressed = false
 var is_collecting = false
 
 func _ready():
+	player_rattle.stream = audio_rattle
 	pass
-
 
 func _input(event):
 	match line:
@@ -15,6 +18,7 @@ func _input(event):
 			if event.is_action_pressed("ui_up"):
 				is_pressed = true
 				is_collecting = true
+				player_rattle.play()
 			elif event.is_action_released("ui_up"):
 				is_pressed = false
 				is_collecting = false
@@ -28,14 +32,14 @@ func _input(event):
 		3:
 			if event.is_action_pressed("ui_down"):
 				is_pressed = true
-				is_collecting = true				
+				is_collecting = true
 			elif event.is_action_released("ui_down"):
 				is_pressed = false
 				is_collecting = false
 		4:
 			if event.is_action_pressed("ui_right"):
 				is_pressed = true
-				is_collecting = true				
+				is_collecting = true
 			elif event.is_action_released("ui_right"):
 				is_pressed = false
 				is_collecting = false

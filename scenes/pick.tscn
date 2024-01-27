@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://5hb7i7pw6dtq"]
+[gd_scene load_steps=5 format=3 uid="uid://5hb7i7pw6dtq"]
 
 [ext_resource type="Shape2D" uid="uid://bnfmnpqn8pgdc" path="res://assets/pick.tres" id="1_2eius"]
 [ext_resource type="Script" path="res://scenes/pick.gd" id="1_7y3t7"]
 [ext_resource type="Texture2D" uid="uid://cf18ggffumh5l" path="res://assets/pick.png" id="2_bcpr6"]
+[ext_resource type="AudioStream" uid="uid://djrisiww2taur" path="res://audio/rattle.ogg" id="4_24wjf"]
 
 [node name="Pick" type="Node2D"]
 script = ExtResource("1_7y3t7")
@@ -14,3 +15,6 @@ shape = ExtResource("1_2eius")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 texture = ExtResource("2_bcpr6")
+
+[node name="AudioRattleStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_24wjf")
