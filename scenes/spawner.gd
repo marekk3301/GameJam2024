@@ -42,7 +42,7 @@ func add_notes():
 					var note_pos = note.pos
 					if note_pos == 0:
 						num_of_0 += 1
-					var calc_pos = note_pos + (num_of_0 * 1600)
+					var calc_pos = note_pos + (num_of_0 * 1600)/2
 					print("Note position:", calc_pos)
 
 					note = note_scene.instantiate()
