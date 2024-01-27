@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgjaqjyrmsct"]
+
+[ext_resource type="SpriteFrames" path="res://assets/spirit_with_tv/" id="1_d6row"]
+
+[node name="SpiritWithTV" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_d6row")

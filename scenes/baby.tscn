@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://baq2p7hl2hdxg"]
+[gd_scene load_steps=3 format=3 uid="uid://baq2p7hl2hdxg"]
 
 [ext_resource type="Texture2D" uid="uid://d3ib5ry22n6al" path="res://assets/baby_neutral.png" id="1_o4rv3"]
+[ext_resource type="Texture2D" uid="uid://dvcnm4q63tik0" path="res://assets/baby_crying/1_3.png" id="1_txyad"]
 
 [node name="Baby" type="Node2D"]
 
@@ -8,9 +9,11 @@
 
 [node name="BabyCrying" type="Node2D" parent="."]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BabyCrying"]
+[node name="Sprite2D" type="Sprite2D" parent="BabyCrying"]
+texture = ExtResource("1_txyad")
 
 [node name="BabyNeutral" type="Node2D" parent="."]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="BabyNeutral"]
 texture = ExtResource("1_o4rv3")
