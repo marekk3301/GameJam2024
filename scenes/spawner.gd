@@ -6,20 +6,8 @@ var is_spawning = false
 
 var audio_map1 = "res://audio_maps/music_box.mboy"
 
-var barShift = 0
-
-var line1_data = [
-	{
-		"pos": 0,
-		"line": 1 
-	},
-	{
-		"pos": 300,
-		"line": 1 
-	}
-]
-# Called when the node enters the scene tree for the first time.
 var num_of_0 = -1;
+
 
 
 func _ready():
@@ -32,24 +20,29 @@ func _input(event):
 			is_spawning = true
 			add_notes()
 
+var next_position = 0;
+
 func add_notes():
 	var parsed_json = load_map(audio_map1)
 	if parsed_json != null:
 		for track in parsed_json.tracks:
 			for bar in track.bars:
+				print(bar)
+				#var time_to_end = 1600
+				
 				for note in bar.notes:
+					var next = next_position
+					#time_to_end = 1600
 					# Access the 'pos' value for each note
 					var note_pos = note.pos
-					if note_pos == 0:
-						num_of_0 += 1
-					var calc_pos = note_pos + (num_of_0 * 1600)/2
-					print("Note position:", calc_pos)
-
+					next += note_pos;
+					print("Note position:", next)
+					#time_to_end -= note_pos
 					note = note_scene.instantiate()
 					note.line = 1
-					note.note_position = calc_pos
+					note.note_position = next /5
 					add_child(note)
-		
+				next_position += 1600
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
