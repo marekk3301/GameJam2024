@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb4uhuaujkx6w"]
+
+[ext_resource type="Texture2D" uid="uid://c5266kqhfd7cf" path="res://assets/Asset 1.png" id="1_xipev"]
+[ext_resource type="PackedScene" uid="uid://5hb7i7pw6dtq" path="res://scenes/pick.tscn" id="2_xf7wk"]
+[ext_resource type="PackedScene" uid="uid://cv6lokehmr7w7" path="res://scenes/spawner.tscn" id="3_bfbbs"]
+
+[node name="Road" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 920)
+texture = ExtResource("1_xipev")
+
+[node name="Pick1" parent="." instance=ExtResource("2_xf7wk")]
+position = Vector2(200, 806)
+line = 1
+
+[node name="Pick2" parent="." instance=ExtResource("2_xf7wk")]
+position = Vector2(200, 882)
+line = 2
+
+[node name="Pick3" parent="." instance=ExtResource("2_xf7wk")]
+position = Vector2(200, 958)
+line = 3
+
+[node name="Pick4" parent="." instance=ExtResource("2_xf7wk")]
+position = Vector2(200, 1034)
+line = 4
+
+[node name="Spawner" parent="." instance=ExtResource("3_bfbbs")]

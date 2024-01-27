@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqf5yivkb5kxs"]
+
+[ext_resource type="Shape2D" uid="uid://cst36qx8xpu2w" path="res://assets/note.tres" id="1_mh1om"]
+[ext_resource type="Script" path="res://scenes/note.gd" id="1_syec5"]
+[ext_resource type="Texture2D" uid="uid://ix5r22f5wycs" path="res://assets/note.png" id="2_1iw1v"]
+
+[node name="Note" type="Node2D"]
+script = ExtResource("1_syec5")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = ExtResource("1_mh1om")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D"]
+texture = ExtResource("2_1iw1v")

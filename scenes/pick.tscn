@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://5hb7i7pw6dtq"]
+
+[ext_resource type="Shape2D" uid="uid://bnfmnpqn8pgdc" path="res://assets/pick.tres" id="1_2eius"]
+[ext_resource type="Script" path="res://scenes/pick.gd" id="1_7y3t7"]
+[ext_resource type="Texture2D" uid="uid://cf18ggffumh5l" path="res://assets/pick.png" id="2_bcpr6"]
+
+[node name="Pick" type="Node2D"]
+script = ExtResource("1_7y3t7")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = ExtResource("1_2eius")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_bcpr6")
