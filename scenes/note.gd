@@ -3,6 +3,11 @@ extends Node2D
 @export var line: int = 0
 var note_position = 0
 
+var is_colliding = false
+var picker
+var collected = false
+
+
 var bpm = 120
 var speed = bpm * 1/30
 
@@ -32,3 +37,24 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	move()
+	collect()
+
+
+func collect():
+	if not collected:
+		if is_colliding and picker:
+			if picker.is_collecting:
+				collected = true
+				picker.is_collecting = false
+				hide()
+
+
+func _on_area_entered(area):
+	if area.is_in_group("picker"): 
+		is_colliding = true
+		picker = area.get_parent()
+
+
+func _on_area_exited(area):
+	if area.is_in_group("picker"): 
+		is_colliding = false

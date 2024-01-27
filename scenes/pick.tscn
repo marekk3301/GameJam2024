@@ -7,7 +7,7 @@
 [node name="Pick" type="Node2D"]
 script = ExtResource("1_7y3t7")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["picker"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = ExtResource("1_2eius")
