@@ -4,5 +4,13 @@
 
 [node name="Baby" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="BabyHappy" type="Node2D" parent="."]
+
+[node name="BabyCrying" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BabyCrying"]
+
+[node name="BabyNeutral" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="BabyNeutral"]
 texture = ExtResource("1_o4rv3")

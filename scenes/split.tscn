@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn3rqyjkqlipp"]
+
+[ext_resource type="Texture2D" uid="uid://yqyvvnvjpta5" path="res://assets/split.png" id="1_mxfku"]
+
+[node name="Split" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mxfku")
