@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var music_node = $Music
+#@onready var music_node = $Music
 @onready var road_node = $Road
 
 var audio

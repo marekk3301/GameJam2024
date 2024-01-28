@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var scoreNode = get_node("/root/Score")
 @export var line: int = 0
 var note_position = 0
 
@@ -7,9 +8,8 @@ var is_colliding = false
 var picker
 var collected = false
 
-
-var bpm = 120
-var speed = bpm * 1
+var bpm = 80
+var speed = 114.28
 
 func set_note_position():
 	var line_height
@@ -26,7 +26,10 @@ func set_note_position():
 
 
 func move(delta):
-	self.position.x -= speed * delta
+	if self.position.x < -300:
+		queue_free()
+	else:
+		self.position.x -= speed * delta
 
 
 # Called when the node enters the scene tree for the first time.
@@ -46,6 +49,7 @@ func collect():
 			if picker.is_collecting:
 				collected = true
 				picker.is_collecting = false
+				scoreNode.points += 1
 				hide()
 
 

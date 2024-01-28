@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://don64u047s3gj"]
+
+[ext_resource type="Script" path="res://scenes/spirit_with_bumbum.gd" id="1_8aowg"]
+[ext_resource type="Texture2D" uid="uid://cgahynrhqn0s7" path="res://assets/spirit_with_bumbum/Bumbum.png" id="2_yvsiv"]
+[ext_resource type="Texture2D" uid="uid://cc31sme4aovbn" path="res://assets/spirit_with_bumbum/Uno.png" id="3_uapaw"]
+[ext_resource type="Texture2D" uid="uid://kkr4sbmu5wvd" path="res://assets/spirit_with_bumbum/Dos.png" id="4_6x5wv"]
+[ext_resource type="Texture2D" uid="uid://dr2y870kltv52" path="res://assets/spirit_with_bumbum/Tres.png" id="5_272h0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3vk2c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yvsiv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_uapaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6x5wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_272h0")
+}],
+"loop": false,
+"name": &"play",
+"speed": 10.0
+}]
+
+[node name="SpiritWithBumbum" type="Node2D"]
+script = ExtResource("1_8aowg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3vk2c")
+autoplay = "default"
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_bumbum_animation_finished"]

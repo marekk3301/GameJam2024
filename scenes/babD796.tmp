@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://baq2p7hl2hdxg"]
+
+[ext_resource type="Script" path="res://scenes/baby_state_machine.gd" id="1_4igx1"]
+[ext_resource type="Texture2D" uid="uid://bkk8dboqhboap" path="res://assets/1_Klatka_Happy.png" id="1_ldj4p"]
+[ext_resource type="Texture2D" uid="uid://d3ib5ry22n6al" path="res://assets/baby_neutral.png" id="1_o4rv3"]
+[ext_resource type="Texture2D" uid="uid://dvcnm4q63tik0" path="res://assets/baby_crying/1_3.png" id="1_txyad"]
+[ext_resource type="Script" path="res://scenes/baby_crying_state.gd" id="3_mkqiw"]
+[ext_resource type="Texture2D" uid="uid://e73rs8ms36nn" path="res://assets/baby_crying/2_Klatka_Cry.png" id="6_h3kts"]
+[ext_resource type="Texture2D" uid="uid://bfuvkdkskq7ws" path="res://assets/baby_crying/3_Klatka_Cry.png" id="7_s70je"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ox6d5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_txyad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h3kts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_s70je")
+}],
+"loop": true,
+"name": &"cry",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"smile",
+"speed": 5.0
+}]
+
+[node name="Baby" type="Node2D"]
+script = ExtResource("1_4igx1")
+
+[node name="BabyHappy" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="BabyHappy"]
+position = Vector2(24, 54)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_ldj4p")
+
+[node name="BabyCrying" type="Node2D" parent="."]
+visible = false
+script = ExtResource("3_mkqiw")
+
+[node name="Sprite2D" type="Sprite2D" parent="BabyCrying"]
+texture = ExtResource("1_txyad")
+
+[node name="BabyNeutral" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="BabyNeutral"]
+texture = ExtResource("1_o4rv3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ox6d5")
+animation = &"cry"
+frame_progress = 0.365186

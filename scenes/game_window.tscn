@@ -1,28 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://cllbwh0u3w8n"]
+[gd_scene load_steps=6 format=3 uid="uid://cllbwh0u3w8n"]
 
 [ext_resource type="Script" path="res://scenes/game_window.gd" id="1_owdo3"]
 [ext_resource type="PackedScene" uid="uid://cb4uhuaujkx6w" path="res://scenes/road.tscn" id="1_qpufo"]
-[ext_resource type="PackedScene" uid="uid://bbx5haalhoq0b" path="res://scenes/music.tscn" id="3_o8xmx"]
-[ext_resource type="PackedScene" uid="uid://clp21ek0jdb7h" path="res://scenes/room.tscn" id="4_yib8i"]
-[ext_resource type="PackedScene" uid="uid://baq2p7hl2hdxg" path="res://scenes/baby.tscn" id="5_mm5mm"]
-[ext_resource type="PackedScene" uid="uid://bn3rqyjkqlipp" path="res://scenes/split.tscn" id="6_ogpkx"]
+[ext_resource type="PackedScene" uid="uid://bto12cssqntap" path="res://scenes/score.tscn" id="2_n1bf1"]
+[ext_resource type="PackedScene" uid="uid://clp21ek0jdb7h" path="res://scenes/room.tscn" id="4_1ecg4"]
+[ext_resource type="PackedScene" uid="uid://dairexrvtkpny" path="res://scenes/music.tscn" id="5_04wnh"]
 
 [node name="GameWindow" type="Node2D"]
 script = ExtResource("1_owdo3")
+
+[node name="Score" parent="." instance=ExtResource("2_n1bf1")]
 
 [node name="Road" parent="." instance=ExtResource("1_qpufo")]
 
 [node name="Camera2D" type="Camera2D" parent="Road"]
 anchor_mode = 0
 
-[node name="Music" parent="." instance=ExtResource("3_o8xmx")]
+[node name="Room" parent="." instance=ExtResource("4_1ecg4")]
 
-[node name="Room" parent="." instance=ExtResource("4_yib8i")]
-
-[node name="Baby" parent="." instance=ExtResource("5_mm5mm")]
-position = Vector2(961, 593)
-scale = Vector2(0.3, 0.3)
-
-[node name="Split" parent="." instance=ExtResource("6_ogpkx")]
-position = Vector2(960, 760)
-scale = Vector2(0.22, 0.22)
+[node name="Music" parent="." instance=ExtResource("5_04wnh")]
