@@ -1,5 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://baq2p7hl2hdxg"]
 
+[ext_resource type="Script" path="res://scenes/baby.gd" id="1_4j36l"]
 [ext_resource type="Texture2D" uid="uid://bkk8dboqhboap" path="res://assets/1_Klatka_Happy.png" id="1_ldj4p"]
 [ext_resource type="Texture2D" uid="uid://d3ib5ry22n6al" path="res://assets/baby_neutral.png" id="1_o4rv3"]
 [ext_resource type="Texture2D" uid="uid://dvcnm4q63tik0" path="res://assets/baby_cry/1_3.png" id="2_bqria"]
@@ -15,25 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://dtj6xc5jvyrqp" path="res://assets/baby_smile/1_Klatka_Smile.png" id="13_xcn1r"]
 [ext_resource type="Texture2D" uid="uid://bcc62i477nutq" path="res://assets/baby_smile/2_Klatka_Smile.png" id="14_kiyxg"]
 [ext_resource type="Texture2D" uid="uid://cgpg5y7wq1i0v" path="res://assets/baby_smile/3_Klatka_Smile.png" id="15_1wtj4"]
-
-[sub_resource type="GDScript" id="GDScript_7k5dv"]
-script/source = "class_name StateMachine
-extends Node
- 
-@onready var animated_sprite_2d = $AnimatedSprite2D
-@onready var scoreNode = get_node(\"/root/Score\")
-
-func _ready():
-	pass
-
-func _process(delta):
-	if scoreNode.points <= 5:
-		animated_sprite_2d.play('cry')
-	elif scoreNode.points <= 10:
-		animated_sprite_2d.play('smile')
-	else:
-		animated_sprite_2d.play('laugh')
-"
 
 [sub_resource type="GDScript" id="GDScript_go81m"]
 script/source = "extends Node2D
@@ -107,7 +89,7 @@ animations = [{
 }]
 
 [node name="Baby" type="Node2D"]
-script = SubResource("GDScript_7k5dv")
+script = ExtResource("1_4j36l")
 
 [node name="BabyHappy" type="Node2D" parent="."]
 visible = false

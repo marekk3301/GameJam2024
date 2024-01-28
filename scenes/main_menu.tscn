@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmukbsqebv65u"]
+
+[ext_resource type="Texture2D" uid="uid://c6xovyyiuviub" path="res://assets/background.png" id="1_o4put"]
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_wlubk"]
+[ext_resource type="Texture2D" uid="uid://d3s0m6ors55ci" path="res://assets/spirit_with_trabka/1_klatkaa.png" id="2_in8mb"]
+[ext_resource type="FontFile" uid="uid://cvsejahxmhg2h" path="res://assets/berlinsans.ttf" id="3_t1124"]
+[ext_resource type="Texture2D" uid="uid://evrdcvmxqpgh" path="res://assets/3_Klatka_Cry.png" id="4_4bewd"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_wlubk")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(901, 541)
+scale = Vector2(1.43947, 1.43947)
+texture = ExtResource("1_o4put")
+
+[node name="Ghost" type="Sprite2D" parent="."]
+position = Vector2(538, 605)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_in8mb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 863.0
+offset_top = 418.0
+offset_right = 1835.0
+offset_bottom = 1006.0
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_t1124")
+theme_override_font_sizes/font_size = 100
+text = "Start"
+
+[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_t1124")
+theme_override_font_sizes/font_size = 100
+text = "Credits"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_t1124")
+theme_override_font_sizes/font_size = 100
+text = "Exit"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(759, 781)
+scale = Vector2(0.522222, 0.522222)
+texture = ExtResource("4_4bewd")
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
