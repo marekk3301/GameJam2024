@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://bngicsm0akpr0"]
+
+[ext_resource type="Script" path="res://scenes/credits.gd" id="1_617vp"]
+[ext_resource type="Texture2D" uid="uid://c6xovyyiuviub" path="res://assets/background.png" id="2_ahel1"]
+[ext_resource type="Texture2D" uid="uid://bhmv8imabf5e0" path="res://assets/button_background.png" id="3_c4c8b"]
+[ext_resource type="FontFile" uid="uid://cvsejahxmhg2h" path="res://assets/berlinsans.ttf" id="3_cd68t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0k8jo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4k7j0"]
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_617vp")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-312, 867)
+scale = Vector2(2.43643, 2.43643)
+texture = ExtResource("2_ahel1")
+
+[node name="BackContainer" type="VBoxContainer" parent="."]
+offset_left = 1086.0
+offset_top = 858.0
+offset_right = 1767.0
+offset_bottom = 964.0
+
+[node name="Sprite2D5" type="Sprite2D" parent="BackContainer"]
+position = Vector2(341, 53)
+scale = Vector2(0.2, 0.164)
+texture = ExtResource("3_c4c8b")
+
+[node name="back" type="Button" parent="BackContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_cd68t")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0k8jo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4k7j0")
+text = "
+"
+alignment = 0
+
+[node name="Label" type="Label" parent="BackContainer/back"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 15.0
+offset_right = 277.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("3_cd68t")
+theme_override_font_sizes/font_size = 70
+text = "Back"
+
+[node name="Authors" type="Label" parent="."]
+offset_left = 133.0
+offset_top = 371.0
+offset_right = 661.0
+offset_bottom = 454.0
+theme_override_fonts/font = ExtResource("3_cd68t")
+theme_override_font_sizes/font_size = 40
+text = "Weronika Schlahs
+
+"
+
+[node name="Authors2" type="Label" parent="."]
+offset_left = 114.0
+offset_top = 448.0
+offset_right = 667.0
+offset_bottom = 513.0
+theme_override_fonts/font = ExtResource("3_cd68t")
+theme_override_font_sizes/font_size = 40
+text = "Agata Dobrzyniewicz
+"
+
+[node name="Authors3" type="Label" parent="."]
+offset_left = 222.0
+offset_top = 525.0
+offset_right = 632.0
+offset_bottom = 578.0
+theme_override_fonts/font = ExtResource("3_cd68t")
+theme_override_font_sizes/font_size = 40
+text = "Marek Kudła
+"
+
+[node name="Authors4" type="Label" parent="."]
+offset_left = 130.0
+offset_top = 606.0
+offset_right = 660.0
+offset_bottom = 703.0
+theme_override_fonts/font = ExtResource("3_cd68t")
+theme_override_font_sizes/font_size = 40
+text = "Michał Majerowski
+
+"
+
+[node name="Credits" type="Label" parent="."]
+offset_left = 183.0
+offset_top = 191.0
+offset_right = 736.0
+offset_bottom = 251.0
+theme_override_fonts/font = ExtResource("3_cd68t")
+theme_override_font_sizes/font_size = 60
+text = "Credits to"
+
+[node name="player to YOU" type="Label" parent="."]
+offset_left = 169.0
+offset_top = 744.0
+offset_right = 722.0
+offset_bottom = 794.0
+theme_override_fonts/font = ExtResource("3_cd68t")
+theme_override_font_sizes/font_size = 50
+text = "...and to You!"
+
+[connection signal="pressed" from="BackContainer/back" to="." method="_on_back_pressed"]
