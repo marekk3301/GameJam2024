@@ -1,20 +1,19 @@
 extends Node2D
 
 @onready var animated_sprite = $AnimatedSprite2D
-#@onready var animation_player_fade = $AnimationPlayer
+
+var audio_trabka = preload("res://audio/trabka.ogg")
+@onready var player_trabka = $AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#animated_sprite.hide()
-	pass
-
+	player_trabka.stream = audio_trabka
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _input(event):
 	if event.is_action_pressed("ui_right"):
-		#animated_sprite.show()
-		#animation_player_fade.play("fade")
+		player_trabka.play()
 		animated_sprite.play("play")
-
 
 func _on_animated_sprite_2d_trabka_animation_finished():
 	animated_sprite.play("default")

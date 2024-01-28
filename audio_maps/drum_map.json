@@ -1,0 +1,252 @@
+{
+    "editor": "mboy-editor_2.2",
+    "format_version": "2.0",
+    "audio": {
+        "artist": "a",
+        "title": "music_box",
+        "album": "",
+        "subgenre": "",
+        "date": "",
+        "download_link": "a",
+        "comments": "",
+        "genre": "Other"
+    },
+    "author": "Null",
+    "date": "2024-01-28",
+    "tempo": 120,
+    "start_pos": 0,
+    "tracks": [
+        {
+            "instrument": "other",
+            "name": "bass",
+            "color": "ff009fff",
+            "bars": [
+                {
+                    "index": 0,
+                    "quarters_count": 4,
+                    "notes": []
+                },
+                {
+                    "index": 1,
+                    "quarters_count": 4,
+                    "notes": []
+                },
+                {
+                    "index": 2,
+                    "quarters_count": 4,
+                    "notes": []
+                },
+                {
+                    "index": 3,
+                    "quarters_count": 4,
+                    "notes": []
+                },
+                {
+                    "index": 4,
+                    "quarters_count": 4,
+                    "notes": []
+                },
+                {
+                    "index": 5,
+                    "quarters_count": 4,
+                    "notes": []
+                },
+                {
+                    "index": 6,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 0,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 7,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 800,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 8,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 1400,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 9,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 0,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 10,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 800,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 11,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 1200,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 12,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 0,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 13,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 800,
+                            "len": 100,
+                            "markers": []
+                        },
+                        {
+                            "pos": 1200,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 14,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 800,
+                            "len": 100,
+                            "markers": []
+                        },
+                        {
+                            "pos": 1500,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 15,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 0,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 16,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 800,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 17,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 1200,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 18,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 0,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 19,
+                    "quarters_count": 4,
+                    "notes": []
+                },
+                {
+                    "index": 20,
+                    "quarters_count": 4,
+                    "notes": []
+                },
+                {
+                    "index": 21,
+                    "quarters_count": 4,
+                    "notes": []
+                },
+                {
+                    "index": 22,
+                    "quarters_count": 4,
+                    "notes": []
+                },
+                {
+                    "index": 23,
+                    "quarters_count": 4,
+                    "notes": []
+                },
+                {
+                    "index": 24,
+                    "quarters_count": 4,
+                    "notes": []
+                }
+            ]
+        }
+    ],
+    "markers": [
+        {
+            "id": "accent",
+            "code": "*",
+            "color": "ffffff00"
+        },
+        {
+            "id": "extended",
+            "code": "->",
+            "color": "ffffff00"
+        }
+    ]
+}

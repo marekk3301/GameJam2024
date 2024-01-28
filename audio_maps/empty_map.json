@@ -1,0 +1,31 @@
+{
+    "editor": "mboy-editor_2.2",
+    "format_version": "2.0",
+    "audio": {
+        "artist": "a",
+        "title": "music_box",
+        "album": "",
+        "subgenre": "",
+        "date": "",
+        "download_link": "a",
+        "comments": "",
+        "genre": "Other"
+    },
+    "author": "Null",
+    "date": "2024-01-28",
+    "tempo": 120,
+    "start_pos": 0,
+    "tracks": [],
+    "markers": [
+        {
+            "id": "accent",
+            "code": "*",
+            "color": "ffffff00"
+        },
+        {
+            "id": "extended",
+            "code": "->",
+            "color": "ffffff00"
+        }
+    ]
+}

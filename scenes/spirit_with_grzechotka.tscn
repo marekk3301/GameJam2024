@@ -1,15 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://bo37nuwd7witq"]
+[gd_scene load_steps=7 format=3 uid="uid://bo37nuwd7witq"]
 
 [ext_resource type="Script" path="res://scenes/spirit_with_grzechotka.gd" id="1_7ehrj"]
+[ext_resource type="AudioStream" uid="uid://djrisiww2taur" path="res://audio/rattle.ogg" id="2_j07w7"]
+[ext_resource type="Texture2D" uid="uid://o58pelnb6loa" path="res://assets/spirit_with_grzechotka/rattle1.png" id="2_usggf"]
+[ext_resource type="Texture2D" uid="uid://bhv532ryae1xe" path="res://assets/spirit_with_grzechotka/rattle.png" id="2_vgv1d"]
+[ext_resource type="Texture2D" uid="uid://dnjlddef2p083" path="res://assets/spirit_with_grzechotka/rattle2.png" id="3_hj6hv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jtjdh"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vgv1d")
+}],
 "loop": true,
 "name": &"default",
 "speed": 0.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_usggf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hj6hv")
+}],
 "loop": false,
 "name": &"play",
 "speed": 10.0
@@ -22,5 +35,8 @@ script = ExtResource("1_7ehrj")
 sprite_frames = SubResource("SpriteFrames_jtjdh")
 animation = &"play"
 autoplay = "default"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_j07w7")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

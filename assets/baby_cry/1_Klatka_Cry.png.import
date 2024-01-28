@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvcnm4q63tik0"
-path="res://.godot/imported/1_3.png-9b6b585ded173800f46dd728a2233148.ctex"
+uid="uid://bpqdcbnmidygu"
+path="res://.godot/imported/1_Klatka_Cry.png-e82c608c1a7d85ccdb96033c4c849769.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/baby_cry/1_3.png"
-dest_files=["res://.godot/imported/1_3.png-9b6b585ded173800f46dd728a2233148.ctex"]
+source_file="res://assets/baby_cry/1_Klatka_Cry.png"
+dest_files=["res://.godot/imported/1_Klatka_Cry.png-e82c608c1a7d85ccdb96033c4c849769.ctex"]
 
 [params]
 
