@@ -1,19 +1,135 @@
-[gd_scene load_steps=3 format=3 uid="uid://baq2p7hl2hdxg"]
+[gd_scene load_steps=19 format=3 uid="uid://baq2p7hl2hdxg"]
 
+[ext_resource type="Texture2D" uid="uid://bkk8dboqhboap" path="res://assets/1_Klatka_Happy.png" id="1_ldj4p"]
 [ext_resource type="Texture2D" uid="uid://d3ib5ry22n6al" path="res://assets/baby_neutral.png" id="1_o4rv3"]
-[ext_resource type="Texture2D" uid="uid://dvcnm4q63tik0" path="res://assets/baby_crying/1_3.png" id="1_txyad"]
+[ext_resource type="Texture2D" uid="uid://dvcnm4q63tik0" path="res://assets/baby_cry/1_3.png" id="2_bqria"]
+[ext_resource type="Texture2D" uid="uid://e73rs8ms36nn" path="res://assets/baby_cry/2_Klatka_Cry.png" id="4_td2jl"]
+[ext_resource type="Texture2D" uid="uid://bfuvkdkskq7ws" path="res://assets/baby_cry/3_Klatka_Cry.png" id="5_nnvwd"]
+[ext_resource type="Texture2D" uid="uid://cqlqqb2mw8mq3" path="res://assets/baby_laugh/1_Klatka_Happy.png" id="6_xqi57"]
+[ext_resource type="Texture2D" uid="uid://dcqwtlahoemo2" path="res://assets/baby_laugh/2_Klatka_Happy.png" id="7_cmbi1"]
+[ext_resource type="Texture2D" uid="uid://coee6kjcb1ey" path="res://assets/baby_laugh/3_Klatka_Happy.png" id="8_1rpbm"]
+[ext_resource type="Texture2D" uid="uid://ci3pv5ccy7y2f" path="res://assets/baby_laugh/4_Klatka_Happy.png" id="9_wuf7p"]
+[ext_resource type="Texture2D" uid="uid://bin4i6itblmu6" path="res://assets/baby_laugh/5_Klatka_Happy.png" id="10_am1p8"]
+[ext_resource type="Texture2D" uid="uid://cy4wrlti6xyb1" path="res://assets/baby_laugh/6_Klatka_Happy.png" id="11_pdvqx"]
+[ext_resource type="Texture2D" uid="uid://gudhmkeey8la" path="res://assets/baby_laugh/7_Klatka_Happy.png" id="12_2d7mp"]
+[ext_resource type="Texture2D" uid="uid://dtj6xc5jvyrqp" path="res://assets/baby_smile/1_Klatka_Smile.png" id="13_xcn1r"]
+[ext_resource type="Texture2D" uid="uid://bcc62i477nutq" path="res://assets/baby_smile/2_Klatka_Smile.png" id="14_kiyxg"]
+[ext_resource type="Texture2D" uid="uid://cgpg5y7wq1i0v" path="res://assets/baby_smile/3_Klatka_Smile.png" id="15_1wtj4"]
+
+[sub_resource type="GDScript" id="GDScript_7k5dv"]
+script/source = "class_name StateMachine
+extends Node
+ 
+@onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var scoreNode = get_node(\"/root/Score\")
+
+func _ready():
+	pass
+
+func _process(delta):
+	if scoreNode.points <= 5:
+		animated_sprite_2d.play('cry')
+	elif scoreNode.points <= 10:
+		animated_sprite_2d.play('smile')
+	else:
+		animated_sprite_2d.play('laugh')
+"
+
+[sub_resource type="GDScript" id="GDScript_go81m"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ox6d5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bqria")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_td2jl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nnvwd")
+}],
+"loop": true,
+"name": &"cry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_xqi57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cmbi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1rpbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wuf7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_am1p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pdvqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2d7mp")
+}],
+"loop": true,
+"name": &"laugh",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_xcn1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kiyxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1wtj4")
+}],
+"loop": true,
+"name": &"smile",
+"speed": 5.0
+}]
 
 [node name="Baby" type="Node2D"]
+script = SubResource("GDScript_7k5dv")
 
 [node name="BabyHappy" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="BabyHappy"]
+position = Vector2(24, 54)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_ldj4p")
 
 [node name="BabyCrying" type="Node2D" parent="."]
+visible = false
+script = SubResource("GDScript_go81m")
 
 [node name="Sprite2D" type="Sprite2D" parent="BabyCrying"]
-texture = ExtResource("1_txyad")
+texture = ExtResource("2_bqria")
 
 [node name="BabyNeutral" type="Node2D" parent="."]
 visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="BabyNeutral"]
 texture = ExtResource("1_o4rv3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ox6d5")
+animation = &"smile"

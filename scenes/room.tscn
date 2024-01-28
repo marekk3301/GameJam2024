@@ -1,12 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://clp21ek0jdb7h"]
+[gd_scene load_steps=6 format=3 uid="uid://clp21ek0jdb7h"]
 
-[ext_resource type="Texture2D" uid="uid://bvpkbyjlt2rai" path="res://assets/background.png" id="1_d2i8r"]
-[ext_resource type="PackedScene" uid="uid://dgjaqjyrmsct" path="res://scenes/spirit_with_tv.tscn" id="2_rg204"]
+[ext_resource type="Texture2D" uid="uid://c6xovyyiuviub" path="res://assets/background.png" id="1_d2i8r"]
+[ext_resource type="PackedScene" uid="uid://cvutq3vnm6pvb" path="res://scenes/spirit_with_tv.tscn" id="2_rg204"]
+[ext_resource type="PackedScene" uid="uid://don64u047s3gj" path="res://scenes/spirit_with_bumbum.tscn" id="4_fw0dl"]
+[ext_resource type="PackedScene" uid="uid://baq2p7hl2hdxg" path="res://scenes/baby.tscn" id="5_tlh55"]
+[ext_resource type="PackedScene" uid="uid://b6s5h324k1q0u" path="res://scenes/spirit_with_trabka.tscn" id="5_urrml"]
 
 [node name="Room" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960, 380)
 texture = ExtResource("1_d2i8r")
 
 [node name="SpiritWithTV" parent="." instance=ExtResource("2_rg204")]
+position = Vector2(160, 422)
+scale = Vector2(0.4, 0.4)
+
+[node name="SpiritWithBumbum" parent="." instance=ExtResource("4_fw0dl")]
+position = Vector2(1253, 647)
+scale = Vector2(0.35, 0.35)
+
+[node name="spirit_with_trabka" parent="." instance=ExtResource("5_urrml")]
+position = Vector2(1637, 341)
+scale = Vector2(0.4, 0.4)
+
+[node name="Baby" parent="." instance=ExtResource("5_tlh55")]
+position = Vector2(858, 548)
+scale = Vector2(0.35, 0.35)

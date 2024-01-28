@@ -15,3 +15,5 @@ func _input(event):
 			is_playing = true
 			player.play()
 
+func _on_audio_stream_player_finished():
+	print("Piosenka sie skonczyla")

@@ -4,10 +4,10 @@ var note_scene = preload("note.tscn")
 
 var is_spawning = false
 
-var audio_map1 = "res://audio_maps/music_box.mboy"
+#var audio_map1 = "res://audio_maps/music_box.json"
+var audio_map = "res://audio_maps/debug_map.json"
 
 var num_of_0 = -1;
-
 
 
 func _ready():
@@ -20,14 +20,15 @@ func _input(event):
 			is_spawning = true
 			add_notes()
 
-var next_position = 0;
+var next_position = -1600;
 
 func add_notes():
-	var parsed_json = load_map(audio_map1)
+	var parsed_json = load_map(audio_map)
 	if parsed_json != null:
 		for track in parsed_json.tracks:
+			#print("Track: ", track)
 			for bar in track.bars:
-				print(bar)
+				#print("Bar: ", bar)
 				#var time_to_end = 1600
 				
 				for note in bar.notes:
@@ -36,11 +37,11 @@ func add_notes():
 					# Access the 'pos' value for each note
 					var note_pos = note.pos
 					next += note_pos;
-					print("Note position:", next)
+					#print("Note position:", next)
 					#time_to_end -= note_pos
 					note = note_scene.instantiate()
 					note.line = 1
-					note.note_position = next /5
+					note.note_position = next / (23/3)
 					add_child(note)
 				next_position += 1600
 

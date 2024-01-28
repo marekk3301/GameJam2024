@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo37nuwd7witq"]
+
+[ext_resource type="Script" path="res://scenes/spirit_with_grzechotka.gd" id="1_7ehrj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jtjdh"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"play",
+"speed": 10.0
+}]
+
+[node name="SpiritWithGrzechotka" type="Node2D"]
+script = ExtResource("1_7ehrj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jtjdh")
+animation = &"play"
+autoplay = "default"
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

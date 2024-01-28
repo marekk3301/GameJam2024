@@ -5,12 +5,19 @@ extends Node2D
 var audio_rattle = preload("res://audio/rattle.ogg")
 @onready var player_rattle = $AudioRattleStreamPlayer2D
 
+var audio_TV = preload("res://audio/static.ogg")
+@onready var player_TV = $AudioTVStreamPlayer2D
+
+#var animated_sprite_TV = preload("res://scenes/pick.tscn").instantiate()
+#@onready var _animated_sprite_tv = $AnimatedSprite2DTV
+@export var animation_tv:PackedScene = preload("res://scenes/spirit_with_tv.tscn")
+
 var is_pressed = false
 var is_collecting = false
 
 func _ready():
 	player_rattle.stream = audio_rattle
-	pass
+	player_TV.stream = audio_TV
 
 func _input(event):
 	match line:
@@ -25,7 +32,8 @@ func _input(event):
 		2:
 			if event.is_action_pressed("ui_left"):
 				is_pressed = true
-				is_collecting = true				
+				is_collecting = true
+				player_TV.play()
 			elif event.is_action_released("ui_left"):
 				is_pressed = false
 				is_collecting = false
