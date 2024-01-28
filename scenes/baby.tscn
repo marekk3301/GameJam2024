@@ -1,7 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://baq2p7hl2hdxg"]
 
 [ext_resource type="Script" path="res://scenes/baby.gd" id="1_4j36l"]
-
 [ext_resource type="Texture2D" uid="uid://bkk8dboqhboap" path="res://assets/1_Klatka_Happy.png" id="1_ldj4p"]
 [ext_resource type="Texture2D" uid="uid://d3ib5ry22n6al" path="res://assets/baby_neutral.png" id="1_o4rv3"]
 [ext_resource type="Texture2D" uid="uid://dvcnm4q63tik0" path="res://assets/baby_cry/1_3.png" id="2_bqria"]
@@ -18,9 +17,78 @@
 [ext_resource type="Texture2D" uid="uid://bcc62i477nutq" path="res://assets/baby_smile/2_Klatka_Smile.png" id="14_kiyxg"]
 [ext_resource type="Texture2D" uid="uid://cgpg5y7wq1i0v" path="res://assets/baby_smile/3_Klatka_Smile.png" id="15_1wtj4"]
 
+[sub_resource type="GDScript" id="GDScript_go81m"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ox6d5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bqria")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_td2jl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nnvwd")
+}],
+"loop": true,
+"name": &"cry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_xqi57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cmbi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1rpbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wuf7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_am1p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pdvqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2d7mp")
+}],
+"loop": true,
+"name": &"laugh",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_xcn1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kiyxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1wtj4")
+}],
+"loop": true,
+"name": &"smile",
+"speed": 5.0
+}]
 
 [node name="Baby" type="Node2D"]
-
 script = ExtResource("1_4j36l")
 
 [node name="BabyHappy" type="Node2D" parent="."]
@@ -46,4 +114,4 @@ texture = ExtResource("1_o4rv3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ox6d5")
-animation = &"smile"
+animation = &"laugh"

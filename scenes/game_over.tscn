@@ -1,0 +1,137 @@
+[gd_scene load_steps=13 format=3 uid="uid://bgwhyvi54030j"]
+
+[ext_resource type="Script" path="res://scenes/game_over.gd" id="1_8yeo0"]
+[ext_resource type="Texture2D" uid="uid://cvil20bjjb516" path="res://assets/backgound_over.png" id="1_cumke"]
+[ext_resource type="FontFile" uid="uid://cvsejahxmhg2h" path="res://assets/berlinsans.ttf" id="2_4y0gt"]
+[ext_resource type="Texture2D" uid="uid://bhmv8imabf5e0" path="res://assets/button_background.png" id="3_h7erp"]
+[ext_resource type="Script" path="res://scenes/score_label.gd" id="4_h54cy"]
+[ext_resource type="PackedScene" uid="uid://baq2p7hl2hdxg" path="res://scenes/baby.tscn" id="5_0h1op"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hyjcj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yuhr8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_neycp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hylpv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ovnf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rh8or"]
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource("1_8yeo0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_cumke")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 172.0
+offset_top = 528.0
+offset_right = 878.0
+offset_bottom = 942.0
+theme_override_constants/separation = 40
+
+[node name="Sprite2D5" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(353, 53.75)
+scale = Vector2(0.2, 0.162)
+texture = ExtResource("3_h7erp")
+
+[node name="Sprite2D6" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(354, 192)
+scale = Vector2(0.2, 0.162)
+texture = ExtResource("3_h7erp")
+
+[node name="Sprite2D7" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(354, 331)
+scale = Vector2(0.2, 0.162)
+texture = ExtResource("3_h7erp")
+
+[node name="Retry" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4y0gt")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hyjcj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yuhr8")
+text = "
+"
+
+[node name="Label" type="Label" parent="VBoxContainer/Retry"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 15.0
+offset_right = 277.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("2_4y0gt")
+theme_override_font_sizes/font_size = 70
+text = "Retry"
+
+[node name="Menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4y0gt")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_neycp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hylpv")
+text = "
+"
+
+[node name="Label" type="Label" parent="VBoxContainer/Menu"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 15.0
+offset_right = 277.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("2_4y0gt")
+theme_override_font_sizes/font_size = 70
+text = "Main menu"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4y0gt")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ovnf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rh8or")
+text = "
+"
+
+[node name="Label" type="Label" parent="VBoxContainer/Exit"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 15.0
+offset_right = 277.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("2_4y0gt")
+theme_override_font_sizes/font_size = 70
+text = "exit"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+offset_left = 191.0
+offset_top = 235.0
+offset_right = 860.0
+offset_bottom = 401.0
+
+[node name="score_label" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4y0gt")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_h54cy")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 265.0
+offset_top = 142.0
+offset_right = 769.0
+offset_bottom = 207.0
+theme_override_fonts/font = ExtResource("2_4y0gt")
+theme_override_font_sizes/font_size = 64
+text = "Your score:"
+
+[node name="Baby" parent="." instance=ExtResource("5_0h1op")]
+position = Vector2(1400, 657)
+rotation = 0.120428
+
+[connection signal="pressed" from="VBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

@@ -16,4 +16,6 @@ func _input(event):
 			player.play()
 
 func _on_audio_stream_player_finished():
-	print("Piosenka sie skonczyla")
+	print("Koniec 1")
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+	print("Koniec 2")
