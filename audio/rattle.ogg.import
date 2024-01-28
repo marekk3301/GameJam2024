@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/rattle.ogg-09f5702a7b1f70c93094162b55b2092f.o
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

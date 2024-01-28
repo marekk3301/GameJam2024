@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://go7q6tece6k3"
-path="res://.godot/imported/4_Klatka_Happy.png-64cb8e5b8e92f89ae2238d9bd0923123.ctex"
+uid="uid://o58pelnb6loa"
+path="res://.godot/imported/rattle1.png-7b044f6ce8b360fea9224de911dd7092.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/baby_laugh/4_Klatka_Happy.png"
-dest_files=["res://.godot/imported/4_Klatka_Happy.png-64cb8e5b8e92f89ae2238d9bd0923123.ctex"]
+source_file="res://assets/spirit_with_grzechotka/rattle1.png"
+dest_files=["res://.godot/imported/rattle1.png-7b044f6ce8b360fea9224de911dd7092.ctex"]
 
 [params]
 

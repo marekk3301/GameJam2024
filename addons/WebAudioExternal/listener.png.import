@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://go7q6tece6k3"
-path="res://.godot/imported/4_Klatka_Happy.png-64cb8e5b8e92f89ae2238d9bd0923123.ctex"
+uid="uid://cl71ped8f2i2u"
+path="res://.godot/imported/listener.png-216803be44906a394535434bdc305562.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/baby_laugh/4_Klatka_Happy.png"
-dest_files=["res://.godot/imported/4_Klatka_Happy.png-64cb8e5b8e92f89ae2238d9bd0923123.ctex"]
+source_file="res://addons/WebAudioExternal/listener.png"
+dest_files=["res://.godot/imported/listener.png-216803be44906a394535434bdc305562.ctex"]
 
 [params]
 
