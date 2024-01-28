@@ -17,9 +17,9 @@
     "start_pos": 0,
     "tracks": [
         {
-            "instrument": "synth",
-            "name": "beben",
-            "color": "ff003aff",
+            "instrument": "other",
+            "name": "grzechotka",
+            "color": "ffb03838",
             "bars": [
                 {
                     "index": 0,
@@ -56,7 +56,7 @@
                     "quarters_count": 4,
                     "notes": [
                         {
-                            "pos": 0,
+                            "pos": 600,
                             "len": 100,
                             "markers": []
                         }
@@ -67,12 +67,7 @@
                     "quarters_count": 4,
                     "notes": [
                         {
-                            "pos": 0,
-                            "len": 100,
-                            "markers": []
-                        },
-                        {
-                            "pos": 800,
+                            "pos": 200,
                             "len": 100,
                             "markers": []
                         }
@@ -83,7 +78,7 @@
                     "quarters_count": 4,
                     "notes": [
                         {
-                            "pos": 800,
+                            "pos": 400,
                             "len": 100,
                             "markers": []
                         }
@@ -94,12 +89,7 @@
                     "quarters_count": 4,
                     "notes": [
                         {
-                            "pos": 0,
-                            "len": 100,
-                            "markers": []
-                        },
-                        {
-                            "pos": 1200,
+                            "pos": 600,
                             "len": 100,
                             "markers": []
                         }
@@ -108,25 +98,19 @@
                 {
                     "index": 10,
                     "quarters_count": 4,
-                    "notes": [
-                        {
-                            "pos": 200,
-                            "len": 100,
-                            "markers": []
-                        },
-                        {
-                            "pos": 800,
-                            "len": 100,
-                            "markers": []
-                        }
-                    ]
+                    "notes": []
                 },
                 {
                     "index": 11,
                     "quarters_count": 4,
                     "notes": [
                         {
-                            "pos": 1200,
+                            "pos": 0,
+                            "len": 100,
+                            "markers": []
+                        },
+                        {
+                            "pos": 900,
                             "len": 100,
                             "markers": []
                         }
@@ -137,12 +121,7 @@
                     "quarters_count": 4,
                     "notes": [
                         {
-                            "pos": 0,
-                            "len": 100,
-                            "markers": []
-                        },
-                        {
-                            "pos": 1200,
+                            "pos": 600,
                             "len": 100,
                             "markers": []
                         }
@@ -153,12 +132,7 @@
                     "quarters_count": 4,
                     "notes": [
                         {
-                            "pos": 800,
-                            "len": 100,
-                            "markers": []
-                        },
-                        {
-                            "pos": 1200,
+                            "pos": 200,
                             "len": 100,
                             "markers": []
                         }
@@ -169,7 +143,12 @@
                     "quarters_count": 4,
                     "notes": [
                         {
-                            "pos": 800,
+                            "pos": 0,
+                            "len": 100,
+                            "markers": []
+                        },
+                        {
+                            "pos": 400,
                             "len": 100,
                             "markers": []
                         }
@@ -180,12 +159,7 @@
                     "quarters_count": 4,
                     "notes": [
                         {
-                            "pos": 0,
-                            "len": 100,
-                            "markers": []
-                        },
-                        {
-                            "pos": 1200,
+                            "pos": 600,
                             "len": 100,
                             "markers": []
                         }
@@ -196,7 +170,12 @@
                     "quarters_count": 4,
                     "notes": [
                         {
-                            "pos": 800,
+                            "pos": 200,
+                            "len": 100,
+                            "markers": []
+                        },
+                        {
+                            "pos": 1400,
                             "len": 100,
                             "markers": []
                         }
@@ -207,12 +186,7 @@
                     "quarters_count": 4,
                     "notes": [
                         {
-                            "pos": 400,
-                            "len": 100,
-                            "markers": []
-                        },
-                        {
-                            "pos": 1200,
+                            "pos": 900,
                             "len": 100,
                             "markers": []
                         }
@@ -223,34 +197,7 @@
                     "quarters_count": 4,
                     "notes": [
                         {
-                            "pos": 0,
-                            "len": 100,
-                            "markers": []
-                        }
-                    ]
-                },
-                {
-                    "index": 19,
-                    "quarters_count": 4,
-                    "notes": [
-                        {
-                            "pos": 1200,
-                            "len": 100,
-                            "markers": []
-                        }
-                    ]
-                },
-                {
-                    "index": 20,
-                    "quarters_count": 4,
-                    "notes": []
-                },
-                {
-                    "index": 21,
-                    "quarters_count": 4,
-                    "notes": [
-                        {
-                            "pos": 0,
+                            "pos": 600,
                             "len": 100,
                             "markers": []
                         },
@@ -262,14 +209,78 @@
                     ]
                 },
                 {
+                    "index": 19,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 200,
+                            "len": 100,
+                            "markers": []
+                        },
+                        {
+                            "pos": 900,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 20,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 400,
+                            "len": 100,
+                            "markers": []
+                        },
+                        {
+                            "pos": 1000,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
+                    "index": 21,
+                    "quarters_count": 4,
+                    "notes": [
+                        {
+                            "pos": 600,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
+                },
+                {
                     "index": 22,
                     "quarters_count": 4,
-                    "notes": []
+                    "notes": [
+                        {
+                            "pos": 200,
+                            "len": 100,
+                            "markers": []
+                        },
+                        {
+                            "pos": 1200,
+                            "len": 100,
+                            "markers": []
+                        }
+                    ]
                 },
                 {
                     "index": 23,
                     "quarters_count": 4,
                     "notes": [
+                        {
+                            "pos": 0,
+                            "len": 100,
+                            "markers": []
+                        },
+                        {
+                            "pos": 1000,
+                            "len": 100,
+                            "markers": []
+                        },
                         {
                             "pos": 1400,
                             "len": 100,

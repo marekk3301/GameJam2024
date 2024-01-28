@@ -5,10 +5,10 @@ var note_scene = preload("note.tscn")
 var is_spawning = false
 
 #var audio_map = "res://audio_maps/music_box.json"
-var audio_map_rattle = "res://audio_maps/debug_map.json"
+var audio_map_rattle = "res://audio_maps/rattle_map.json"
 var audio_map_TV = "res://audio_maps/static_map.json"
 var audio_map_bumbum = "res://audio_maps/drum_map.json"
-var audio_map_trabka = "res://audio_maps/empty_map.json"
+var audio_map_trabka = "res://audio_maps/trabka_map.json"
 
 var num_of_0 = -1;
 

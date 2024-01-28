@@ -8,9 +8,9 @@ func _ready():
 	pass
 
 func _process(delta):
-	if scoreNode.points <= 5:
+	if scoreNode.points <= 20:
 		animated_sprite_2d.play('cry')
-	elif scoreNode.points <= 10:
+	elif scoreNode.points <= 45:
 		animated_sprite_2d.play('smile')
 	else:
 		animated_sprite_2d.play('laugh')
