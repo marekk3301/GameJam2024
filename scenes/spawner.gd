@@ -4,7 +4,7 @@ var note_scene = preload("note.tscn")
 
 var is_spawning = false
 
-#var audio_map1 = "res://audio_maps/music_box.json"
+#var audio_map = "res://audio_maps/music_box.json"
 var audio_map = "res://audio_maps/debug_map.json"
 
 var num_of_0 = -1;
